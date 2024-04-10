@@ -11,6 +11,7 @@ class TicTacToe(QWidget):
     def initUI(self):
         self.board = [[' ' for _ in range(3)] for _ in range(3)]
         self.current_player = "X"
+        self.moves = 0
 
         self.layout = QGridLayout()
 
@@ -29,10 +30,15 @@ class TicTacToe(QWidget):
         if self.board[row][col] == ' ':
             self.board[row][col] = self.current_player
             self.display_board()
+            self.moves += 1
             if self.check_win():
-                self.game_over()
+                self.game_over(f"Player {self.current_player} wins!")
                 self.disable_buttons()
-            self.current_player = "O" if self.current_player == "X" else "X"
+            elif self.moves == 9:
+                self.game_over("It's a tie!")
+                self.disable_buttons()
+            else:
+                self.current_player = "O" if self.current_player == "X" else "X"
 
     def display_board(self):
         for i in range(3):
@@ -57,8 +63,8 @@ class TicTacToe(QWidget):
 
         return False
 
-    def game_over(self):
-        winner_label = QLabel(f"Player {self.current_player} wins!")
+    def game_over(self, message):
+        winner_label = QLabel(message)
         winner_label.setAlignment(Qt.AlignCenter)
         
         self.layout.addWidget(winner_label, 3, 0, 1, 3)

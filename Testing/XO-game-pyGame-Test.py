@@ -64,10 +64,10 @@ def mark_spot(row, col, player):
 
 # Function to switch player
 def switch_player(player):
-    if player == 'X':
-        return 'O'
-    else:
+    if player == 'O':
         return 'X'
+    else:
+        return 'O'
 
 # Function to check if there is a winner
 def check_winner():
@@ -96,6 +96,7 @@ while True:
     draw_board()
     handle_events()
     if check_winner():
+        player = switch_player(player)
         text = FONT.render(f"Player {player} wins!", True, RED)
         screen.blit(text, (MARGIN, HEIGHT - FONT_SIZE - MARGIN))
         pygame.display.flip()

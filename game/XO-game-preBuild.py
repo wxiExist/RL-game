@@ -4,8 +4,8 @@ import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QGridLayout, QLabel
 from PyQt5.QtCore import Qt
 
-L = 4 #rows
-R = 4 #cols
+L = 3 #rows
+R = 3 #cols
 
 
 class TicTacToe(QWidget):

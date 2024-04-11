@@ -38,6 +38,11 @@ def draw_board():
             elif board[i][j] == 'O':
                 pygame.draw.circle(screen, BLUE, (x + SIZE // 2, y + SIZE // 2), SIZE // 2, 15)
 
+    # Draw black lines between fields
+    for i in range(1, 3):
+        pygame.draw.line(screen, BLACK, (MARGIN + i * SIZE, MARGIN), (MARGIN + i * SIZE, MARGIN + 3 * SIZE), 5)
+        pygame.draw.line(screen, BLACK, (MARGIN, MARGIN + i * SIZE), (MARGIN + 3 * SIZE, MARGIN + i * SIZE), 5)
+
 # Function to handle events
 def handle_events():
     global player  # Declare player as a global variable

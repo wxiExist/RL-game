@@ -96,6 +96,8 @@ while True:
     draw_board()
     handle_events()
     if check_winner():
+        #mark_spot(row, col, player)
+        handle_events()
         player = switch_player(player)
         text = FONT.render(f"Player {player} wins!", True, RED)
         screen.blit(text, (MARGIN, HEIGHT - FONT_SIZE - MARGIN))

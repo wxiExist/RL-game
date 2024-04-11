@@ -60,10 +60,12 @@ class Agent:
     def train(self, batch_size, epochs):
         global iter
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        #device = torch.device("cuda:0")
         if device == "cuda":
             print("Model is training on GPU")
-        else:
-            print("cant find cuda device")
+        if device == "cpu":
+            print("cant find cuda device | WORK ON CPU!")
+        print(device)
         self.model.to(device)
 
         for epoch in range(1, epochs + 1):
@@ -165,6 +167,8 @@ def print_board(board):
         print(row)
 
 if __name__ == "__main__":
+    torch.cuda.is_available() 
+    print(torch.cuda.is_available())
     agent = Agent()
     agent.train(batch_size=1000, epochs=1000)
     play_game()

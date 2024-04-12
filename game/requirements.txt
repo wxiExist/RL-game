@@ -3,3 +3,4 @@ PyQt5==5.15.10
 numpy==1.26.4
 torch==2.2.2
 pygame==2.5.2
+torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118

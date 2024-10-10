@@ -1,5 +1,6 @@
 # Preview
-![Иллюстрация к проекту]([https://github.com/jon/coolproject/raw/master/image/image.png](https://github.com/wxiExist/RL-game/blob/main/gif/123.gif))
+![](https://github.com/user-attachments/assets/70899f50-63ac-458e-849b-55a3af7787a6)
+
 
 # How to use:
 + Download

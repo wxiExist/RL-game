@@ -1,5 +1,5 @@
 # Preview
-![Иллюстрация к проекту]([https://github.com/jon/coolproject/raw/master/image/image.png](https://github.com/wxiExist/RL-game/blob/main/gif/123.gif)
+![Иллюстрация к проекту]([https://github.com/jon/coolproject/raw/master/image/image.png](https://github.com/wxiExist/RL-game/blob/main/gif/123.gif))
 
 # How to use:
 + Download
